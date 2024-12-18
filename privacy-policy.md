@@ -21,12 +21,16 @@ The only data stored by this extension is your personal preferences for the exte
 - Is never transmitted to external servers
 
 ## Permissions
-This extension requires minimal permissions:
-- "storage": Used only to save your preferences locally
-- "activeTab": Used to add the scroll-to-top button only when you click the extension icon
-- "scripting": Required to add the scroll button to the current page when activated
+This extension requires only one permission:
+- "storage": Used only to save your preferences locally (such as your keyboard shortcut setting)
 
-The extension only operates on the current tab when you explicitly click the extension icon, providing maximum privacy and security.
+The extension uses content scripts to add the scroll-to-top button to web pages. Content scripts:
+- Are automatically injected into web pages
+- Only run on standard web pages (http:// and https:// URLs)
+- Cannot access or modify browser settings
+- Cannot access data from other websites
+
+This minimal permission approach ensures maximum privacy and security for our users.
 
 ## Updates to This Policy
 We may update this Privacy Policy from time to time. We will notify users of any material changes by updating the "Last Updated" date at the top of this Privacy Policy.

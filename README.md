@@ -1,6 +1,6 @@
 # README.md
 
-# Chrome Go to Top Extension
+# Chrome Scroll to Top Extension
 
 This Chrome extension adds a button at the bottom of web pages. When clicked, the button scrolls the page back to the top.
 

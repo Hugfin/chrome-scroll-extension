@@ -1,9 +1,9 @@
 let isButtonVisible = true;
 let button = null;
-let shortcutKey = 's'; // default value
+let shortcutKey = 'i'; // default value
 
 // Load the user's preferred shortcut key
-chrome.storage.sync.get({ shortcutKey: 's' }, (items) => {
+chrome.storage.sync.get({ shortcutKey: 'i' }, (items) => {
     shortcutKey = items.shortcutKey;
 });
 

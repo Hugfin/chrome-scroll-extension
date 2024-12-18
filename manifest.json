@@ -4,9 +4,7 @@
   "version": "1.0",
   "description": "Adds a button to scroll to the top of the page.",
   "permissions": [
-    "storage",
-    "scripting",
-    "tabs"
+    "storage"
   ],
   "content_scripts": [
     {

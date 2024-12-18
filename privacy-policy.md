@@ -1,4 +1,4 @@
-# Privacy Policy for Chrome Go to Top Extension
+# Privacy Policy for Chrome Scroll to Top Extension
 
 Last Updated: December 19, 2023
 
@@ -23,7 +23,10 @@ The only data stored by this extension is your personal preferences for the exte
 ## Permissions
 This extension requires minimal permissions:
 - "storage": Used only to save your preferences locally
-- Access to web pages: Required to add the scroll-to-top button functionality
+- "activeTab": Used to add the scroll-to-top button only when you click the extension icon
+- "scripting": Required to add the scroll button to the current page when activated
+
+The extension only operates on the current tab when you explicitly click the extension icon, providing maximum privacy and security.
 
 ## Updates to This Policy
 We may update this Privacy Policy from time to time. We will notify users of any material changes by updating the "Last Updated" date at the top of this Privacy Policy.

@@ -6,8 +6,8 @@ function saveOptions() {
         return;
     }
 
-    if (!/^[a-z]$/.test(shortcut)) {
-        showStatus('Please enter a single letter (a-z)', false);
+    if (!/^[a-z[\];',./`]$/.test(shortcut)) {
+        showStatus('Please enter a single character (a-z or common punctuation marks: [ ] ; \' , . / `)', false);
         return;
     }
 

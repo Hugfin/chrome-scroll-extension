@@ -1,9 +1,9 @@
 let isButtonVisible = true;
 let button = null;
-let shortcutKey = 'i'; // default value
+let shortcutKey = '['; // default value
 
 // Load the user's preferred shortcut key
-chrome.storage.sync.get({ shortcutKey: 'i' }, (items) => {
+chrome.storage.sync.get({ shortcutKey: '[' }, (items) => {
     shortcutKey = items.shortcutKey;
 });
 
@@ -26,7 +26,10 @@ function initializeButton() {
     closeButton.className = 'close-button';
     button.appendChild(closeButton);
 
-    button.style.display = 'none';
+    document.body.appendChild(button);
+
+    // Initially hide the button if we're at the top
+    button.style.display = window.scrollY > 100 ? 'block' : 'none';
 
     // Scroll event listener
     window.addEventListener('scroll', () => {
@@ -37,7 +40,7 @@ function initializeButton() {
         }
     });
 
-    // Keyboard shortcut for showing the button
+    // Keyboard shortcut for showing the button when invisible
     document.addEventListener('keydown', (e) => {
         if (e.key.toLowerCase() === shortcutKey && !isButtonVisible) {
             isButtonVisible = true;
@@ -48,18 +51,17 @@ function initializeButton() {
     });
 
     button.addEventListener('click', (e) => {
-        if (e.target !== closeButton) {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (e.target === closeButton) {
+            isButtonVisible = false;
+            button.style.display = 'none';
+        } else {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
     });
-
-    closeButton.addEventListener('click', (e) => {
-        e.stopPropagation();
-        isButtonVisible = false;
-        button.style.display = 'none';
-    });
-
-    document.body.appendChild(button);
 }
 
+// Initialize the button as soon as the content script loads
 initializeButton();

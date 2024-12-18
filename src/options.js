@@ -23,7 +23,7 @@ function saveOptions() {
 // stored in chrome.storage.
 function restoreOptions() {
     chrome.storage.sync.get(
-        { shortcutKey: 'i' }, // default value
+        { shortcutKey: '[' }, // default value
         (items) => {
             document.getElementById('shortcut').value = items.shortcutKey;
         }

@@ -5,8 +5,15 @@
   "description": "Adds a button to scroll to the top of the page.",
   "permissions": [
     "storage",
-    "activeTab",
-    "scripting"
+    "scripting",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["src/content.js"],
+      "css": ["src/styles.css"]
+    }
   ],
   "action": {
     "default_icon": {

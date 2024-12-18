@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Go to Top Extension",
+  "version": "1.0",
+  "description": "Adds a button to scroll to the top of the page.",
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "options_page": "src/options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "css": ["src/styles.css"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

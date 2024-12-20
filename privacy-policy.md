@@ -36,7 +36,7 @@ This minimal permission approach ensures maximum privacy and security for our us
 We may update this Privacy Policy from time to time. We will notify users of any material changes by updating the "Last Updated" date at the top of this Privacy Policy.
 
 ## Contact
-If you have any questions about this Privacy Policy, please create an issue on our GitHub repository at [repository URL].
+If you have any questions about this Privacy Policy, please create an issue on our GitHub repository at https://github.com/Hugfin/chrome-scroll-extension
 
 ## Source Code
 This extension is open source. You can review the complete source code at our GitHub repository.
